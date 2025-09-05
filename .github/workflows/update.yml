@@ -17,7 +17,6 @@ jobs:
           run: |
             current_date=$(date -u +"%Y-%m-%d")
             sed -i 's|<meta name="dcterms.modified" content="[^"]*"|<meta name="dcterms.modified" content="'"$current_date"'"|' index.html        
-        
         - name: Commit changes
           run: |
             git config --local user.name "GitHub Actions"
